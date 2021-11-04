@@ -28,13 +28,12 @@ public class Main_task2 {
     }
 
     private static double inputMeterPrice(InputStream in, Function<String, Double> converter) {
-        try (Scanner sc = new Scanner(in)) {
+        try (final Scanner sc = new Scanner(in)) {
             while (true) {
                 printLine("Введите минимально допустимую стоимость 1м2 в регионе: ", System.out);
                 final String line = sc.nextLine().trim().replaceAll("[&&[^^0-9.]]", "");
                 try {
-                    final double price = converter.apply(line);
-                    return price;
+                    return converter.apply(line);
                 } catch (NumberFormatException e) {
                     printLine("Ошибка. Повторите ввод!", System.out);
                 }

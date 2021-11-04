@@ -55,7 +55,7 @@ public class Main_task1 {
             for (int j = 0; j < length; j++) {
                 sb.append((char) (rnd.nextInt(LAST_CHAR + 1 - FIRST_CHAR) + FIRST_CHAR));
             }
-            String[] array = sb.toString().split(SEPARATOR);
+            final String[] array = sb.toString().split(SEPARATOR);
             sb
                     .append(SEPARATOR)
                     .append(getText(wordsInText - array.length));
