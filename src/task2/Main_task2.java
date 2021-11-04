@@ -9,7 +9,7 @@ public class Main_task2 {
     private static final int TOTAL_DEALS = 25;
 
     public static void main(String[] args) {
-        printLine("\n\tЗадача 2. Кадастровый помощник\n", System.out);
+        printLine("\n\tЗадача 2*. Кадастровый помощник\n", System.out);
 
         final double marketMeterPrice = inputMeterPrice(System.in, Double::parseDouble);
         final Function<Deal, Boolean> legalizer =
